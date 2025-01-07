@@ -1,0 +1,4 @@
+deployment:
+  type: git
+  repository: https://github.com/foro071019/Best-Way-Roof-Restoration-Website.git
+  branch: main  # Replace with your branch name if different
