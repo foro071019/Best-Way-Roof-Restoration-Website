@@ -2,7 +2,7 @@
   get_header();
  ?>
     <main>
-        <section class="sec_1">
+        <section class="sec_1" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/roof_clean.png');">
             
             <div class="sec_1_wrapper container">
                 <figure>
