@@ -6,7 +6,7 @@
             
             <div class="sec_1_wrapper container">
                 <figure>
-                    <img src="assets/img/black_ink_shadow_transparent_logo.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black_ink_shadow_transparent_logo.png" alt="">
                 </figure>
             </div>
             <div class="services">
