@@ -12,6 +12,9 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style('home-page', get_template_directory_uri() . '/assets/css/home_page.css');
     wp_enqueue_style('home-page-header', get_template_directory_uri() . '/assets/css/home_page_header.css');
     wp_enqueue_style('home-page-footer', get_template_directory_uri() . '/assets/css/home_page_footer.css');
+
+
+    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/bootstrap-5.3.3-dist/js/bootstrap.min.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
