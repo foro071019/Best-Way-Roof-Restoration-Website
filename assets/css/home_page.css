@@ -11,6 +11,7 @@ margin: 0 0 100px 0;
     justify-content: center;
     align-items: center;
     width: 100%;
+    background-image: url("../img/roof_clean.png");
     background-size: cover;
     height: 100vh;
     background-repeat: no-repeat;
