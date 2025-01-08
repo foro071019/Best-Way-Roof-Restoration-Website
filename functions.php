@@ -18,4 +18,40 @@ function my_theme_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
-?>
+function handle_service_form_submission() {
+    // Verify the request method is POST
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        wp_die('Invalid request method');
+    }
+
+    // Sanitize the form inputs
+    $full_name = sanitize_text_field($_POST['fullName']);
+    $phone_number = sanitize_text_field($_POST['phoneNumber']);
+    $email_address = sanitize_email($_POST['emailAddress']);
+    $property_address = sanitize_text_field($_POST['propertyAddress']);
+    $services = isset($_POST['services']) ? implode(', ', array_map('sanitize_text_field', (array) $_POST['services'])) : '';
+    $message = sanitize_textarea_field($_POST['message']);
+
+    // Send an email (WordPress's built-in mail function)
+    $to = get_option('admin_email'); // Replace with your desired recipient email
+    $subject = "New Service Form Submission from $full_name";
+    $body = "Full Name: $full_name\n"
+          . "Phone Number: $phone_number\n"
+          . "Email Address: $email_address\n"
+          . "Property Address: $property_address\n"
+          . "Services Interested In: $services\n"
+          . "Message: $message\n";
+    $headers = ['Content-Type: text/plain; charset=UTF-8'];
+
+    // Send the email
+    $sent = wp_mail($to, $subject, $body, $headers);
+
+    if ($sent) {
+        wp_redirect(home_url('/thank-you/')); // Redirect to a thank-you page
+        exit;
+    } else {
+        wp_die('There was an issue sending your message. Please try again later.');
+    }
+}
+add_action('admin_post_submit_service_form', 'handle_service_form_submission'); // For logged-in users
+add_action('admin_post_nopriv_submit_service_form', 'handle_service_form_submission'); // For logged-out users
