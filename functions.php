@@ -18,35 +18,40 @@ function my_theme_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
-
 function handle_service_form_submission() {
-    // Check if the form is submitted
-    if (isset($_POST['fullName'], $_POST['phoneNumber'], $_POST['emailAddress'], $_POST['propertyAddress'])) {
-        // Sanitize form data
-        $fullName = sanitize_text_field($_POST['fullName']);
-        $phoneNumber = sanitize_text_field($_POST['phoneNumber']);
-        $emailAddress = sanitize_email($_POST['emailAddress']);
-        $propertyAddress = sanitize_text_field($_POST['propertyAddress']);
-        $message = sanitize_textarea_field($_POST['message']);
-        $services = isset($_POST['services']) ? implode(', ', $_POST['services']) : 'None';
+    // Verify the request method is POST
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        wp_die('Invalid request method');
+    }
 
-        // Construct the email message
-        $email_message = "Full Name: $fullName\n";
-        $email_message .= "Phone Number: $phoneNumber\n";
-        $email_message .= "Email Address: $emailAddress\n";
-        $email_message .= "Property Address: $propertyAddress\n";
-        $email_message .= "Services: $services\n";
-        $email_message .= "Message: $message\n";
+    // Sanitize the form inputs
+    $full_name = sanitize_text_field($_POST['fullName']);
+    $phone_number = sanitize_text_field($_POST['phoneNumber']);
+    $email_address = sanitize_email($_POST['emailAddress']);
+    $property_address = sanitize_text_field($_POST['propertyAddress']);
+    $services = isset($_POST['services']) ? implode(', ', array_map('sanitize_text_field', (array) $_POST['services'])) : '';
+    $message = sanitize_textarea_field($_POST['message']);
 
-        // Send the email using WP Mail SMTP
-        wp_mail('youremail@example.com', 'New Service Form Submission', $email_message);
+    // Send an email (WordPress's built-in mail function)
+    $to = get_option('admin_email'); // Replace with your desired recipient email
+    $subject = "New Service Form Submission from $full_name";
+    $body = "Full Name: $full_name\n"
+          . "Phone Number: $phone_number\n"
+          . "Email Address: $email_address\n"
+          . "Property Address: $property_address\n"
+          . "Services Interested In: $services\n"
+          . "Message: $message\n";
+    $headers = ['Content-Type: text/plain; charset=UTF-8'];
 
-        // Redirect to a thank you page or show a success message
-        wp_redirect(home_url('/thank-you/'));
+    // Send the email
+    $sent = wp_mail($to, $subject, $body, $headers);
+
+    if ($sent) {
+        wp_redirect(home_url('/thank-you/')); // Redirect to a thank-you page
         exit;
+    } else {
+        wp_die('There was an issue sending your message. Please try again later.');
     }
 }
-
-// Hook the function to admin_post (for logged-in users) and admin_post_nopriv (for non-logged-in users)
-add_action('admin_post_service_form', 'handle_service_form_submission');
-add_action('admin_post_nopriv_service_form', 'handle_service_form_submission');
+add_action('admin_post_submit_service_form', 'handle_service_form_submission'); // For logged-in users
+add_action('admin_post_nopriv_submit_service_form', 'handle_service_form_submission'); // For logged-out users

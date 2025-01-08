@@ -35,30 +35,32 @@
                 <form id="serviceForm" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
                     <label for="fullName">Full Name<span>*</span>: </label>
                     <input type="text" id="fullName" name="fullName" required><br><br>
-
+            
                     <label for="phoneNumber">Phone Number<span>*</span>: </label>
                     <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
-
+            
                     <label for="emailAddress">Email Address<span>*</span>: </label>
                     <input type="email" id="emailAddress" name="emailAddress" required><br><br>
-
+            
                     <label for="propertyAddress">Property Address<span>*</span>: </label>
                     <input type="text" id="propertyAddress" name="propertyAddress" required><br><br>
-
+            
                     <label>Services Interested in (optional):</label><br>
-                    <input type="checkbox" id="roofCleaning" name="services[]" value="Roof Cleaning">
+                    <input type="checkbox" id="roofCleaning" name="services" value="Roof Cleaning">
                     <label for="roofCleaning">Roof cleaning</label><br>
-                    <input type="checkbox" id="gutterCleaning" name="services[]" value="Gutter Cleaning">
+                    <input type="checkbox" id="gutterCleaning" name="services" value="Gutter Cleaning">
                     <label for="gutterCleaning">Gutter cleaning</label><br>
-                    <input type="checkbox" id="roofSealing" name="services[]" value="Roof Sealing">
+                    <input type="checkbox" id="roofSealing" name="services" value="Roof Sealing">
                     <label for="roofSealing">Roof sealing</label><br><br>
-
+            
                     <label for="message">Message (optional): </label><br>
                     <textarea id="message" name="message"></textarea><br><br>
-
-                    <button type="submit">Submit <i class="fa-solid fa-check"></i></button>
+            
+                    <button type="submit">
+                        Submit
+                        <i class="fa-solid fa-check"></i>
+                    </button>
                 </form>
-
             
                 <script>
                     document.getElementById('serviceForm').addEventListener('submit', function(event) {
