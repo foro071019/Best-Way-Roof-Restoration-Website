@@ -32,9 +32,9 @@
             <div class="form_wrapper container">
             <?php echo do_shortcode("[ninja_form id='2']"); ?>
 
-                <h1>SCHEDULE FREE ROOF INSPECTION</h1>
+                <!-- <h1>SCHEDULE FREE ROOF INSPECTION</h1> -->
 
-                <form id="serviceForm" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
+                <!-- <form id="serviceForm" action="< ?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
                     <label for="fullName">Full Name<span>*</span>: </label>
                     <input type="text" id="fullName" name="fullName" required><br><br>
             
@@ -78,7 +78,7 @@
                         console.log('Form Data:', formData);
                         alert('Form submitted successfully!');
                     });
-                </script>
+                </script> -->
             </div>
             
 
