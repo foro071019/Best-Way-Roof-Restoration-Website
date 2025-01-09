@@ -30,6 +30,8 @@
         </section>
         <section class="sec_2">
             <div class="form_wrapper container">
+            <?php echo do_shortcode('[wpforms id="7" title="false"]'); ?>
+
                 <h1>SCHEDULE FREE ROOF INSPECTION</h1>
 
                 <form id="serviceForm" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
