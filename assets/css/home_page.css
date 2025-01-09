@@ -180,6 +180,7 @@ button {
         background-image: url("../img/roof_detergent_spray.png");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: 0px -3px;
         color: aliceblue;
     }
 
@@ -194,6 +195,7 @@ button {
         background-image: url("../img/roof_sealant_application.png");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: 0px -3px;
         color: aliceblue;
     }
 
@@ -201,6 +203,7 @@ button {
         background-image: url("../img/gutter_clean.png");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: 0px -3px;
         color: aliceblue;
     }
 
@@ -208,6 +211,7 @@ button {
         background-image: url("../img/before_after_roof_clean.png");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: 0px -3px;
         color: aliceblue;
     }
 
