@@ -67,9 +67,6 @@ margin: 0 0 100px 0;
     font-weight: 700;
 }
 
-form span{
-    color: red;
-}
 
 input#propertyAddress, input#emailAddress, input#phoneNumber, input#fullName {
     width: 100%;
