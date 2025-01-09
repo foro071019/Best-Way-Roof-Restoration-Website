@@ -30,7 +30,7 @@
         </section>
         <section class="sec_2">
             <div class="form_wrapper container">
-            <?php echo do_shortcode('[wpforms id="7" title="false"]'); ?>
+            <?php echo do_shortcode("[ninja_form id='2']"); ?>
 
                 <h1>SCHEDULE FREE ROOF INSPECTION</h1>
 
