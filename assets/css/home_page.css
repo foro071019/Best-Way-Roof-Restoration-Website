@@ -58,6 +58,10 @@ form {
     display: none;
 }
 
+input#nf-field-11 {
+    width: 100%;
+}
+
 .sec_2 .form_wrapper{
     display: flex;
     justify-content: center;
