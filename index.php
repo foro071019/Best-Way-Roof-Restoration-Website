@@ -10,7 +10,7 @@
                 </figure>
             </div>
             <div class="services">
-                <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div id="carouselExampleSlidesOnly" class="carousel carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="3000">
                             <p>ROOF CLEANING</p>
