@@ -52,7 +52,9 @@ margin: 0 0 100px 0;
 
 
 
-
+.nf-before-form-content {
+    display: none;
+}
 
 .sec_2 .form_wrapper{
     display: flex;
