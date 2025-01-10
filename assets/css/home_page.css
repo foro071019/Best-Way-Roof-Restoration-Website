@@ -191,39 +191,35 @@ button {
     .par_content1{
         background-image: url("../img/roof_detergent_spray.png");
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0px -3px;
+        background-position: center;
         color: aliceblue;
     }
 
     .par_content2{
         background-image: url("../img/roof_brush_scrub.png");
         background-repeat: no-repeat;
-        background-size: cover;
+        background-position: center;
         color: aliceblue;
     }
 
     .par_content3{
         background-image: url("../img/roof_sealant_application.png");
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0px -3px;
+        background-position: center;
         color: aliceblue;
     }
 
     .par_content4{
         background-image: url("../img/gutter_clean.png");
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0px -3px;
+        background-position: center;
         color: aliceblue;
     }
 
     .par_content5{
         background-image: url("../img/before_after_roof_clean.png");
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0px -3px;
+        background-position: center;
         color: aliceblue;
     }
 
