@@ -3,6 +3,9 @@
     font-family: "Arvo", serif;
 }
 
+body{
+    text-align: justify !important;
+}
 
 li{list-style: none;}
 a{color: unset;}
