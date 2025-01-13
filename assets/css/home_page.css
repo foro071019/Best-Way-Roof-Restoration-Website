@@ -49,6 +49,9 @@ div#nf-form-2-cont {
     padding: 50px 50px;
 }
 
+.form_wrapper.container {
+    color: aliceblue;
+}
 
 form {
     margin-top: 80px;
@@ -170,70 +173,101 @@ button {
 
 
 
+    .sec_4{
+        background-color: #141414;
+        padding: 60px 0 60px 0;
+    }
+    
+    .sec_4 .par_wrapper .par_content1 .container,
+    .sec_4 .par_wrapper .par_content2 .container,
+    .sec_4 .par_wrapper .par_content3 .container,
+    .sec_4 .par_wrapper .par_content4 .container{
+        display: flex;
+    }
 
-
-
-
-    .sec_4 .par_wrapper .container{
+    .sec_4 .par_wrapper .par_content1 .container .text_wrap,
+    .sec_4 .par_wrapper .par_content2 .container .text_wrap,
+    .sec_4 .par_wrapper .par_content3 .container .text_wrap,
+    .sec_4 .par_wrapper .par_content4 .container .text_wrap{
+        width: 50%;
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 30px;
     }
 
-    .sec_4 .par_wrapper h3{
-        font-size: xx-large;
-        font-weight: 700;
+    .sec_4 .par_wrapper .par_content1 .container .img_wrap,
+    .sec_4 .par_wrapper .par_content2 .container .img_wrap,
+    .sec_4 .par_wrapper .par_content3 .container .img_wrap,
+    .sec_4 .par_wrapper .par_content4 .container .img_wrap{
+        width: 50%;
+        display: flex;
     }
 
-    .par_content1, .par_content2, .par_content3,.par_content4, .par_content5{
-        padding: 200px 0 200px 0;
-        font-size: larger;
+    .sec_4 .par_wrapper .par_content1 .container .img_wrap figure,
+    .sec_4 .par_wrapper .par_content2 .container .img_wrap figure,
+    .sec_4 .par_wrapper .par_content3 .container .img_wrap figure,
+    .sec_4 .par_wrapper .par_content4 .container .img_wrap figure{
+        width: 100%;
     }
 
-    .par_content1{
-        background-image: url("../img/roof_detergent_spray.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0px -3px;
+    .sec_4 .par_wrapper .par_content1 .container .img_wrap figure img,
+    .sec_4 .par_wrapper .par_content2 .container .img_wrap figure img,
+    .sec_4 .par_wrapper .par_content3 .container .img_wrap figure img,
+    .sec_4 .par_wrapper .par_content4 .container .img_wrap figure img{
+        width: 100%;
+        padding: 20px;
+    }
+
+
+
+
+    .sec_5{
+        background-color: #141414;
         color: aliceblue;
+        text-align: center;
     }
 
-    .par_content2{
-        background-image: url("../img/roof_brush_scrub.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        color: aliceblue;
-    }
-
-    .par_content3{
-        background-image: url("../img/roof_sealant_application.png");
-        background-repeat: no-repeat;
-        color: aliceblue;
-        background-size: cover;
-        background-position: 0px -3px;
-    }
-
-    .par_content4{
-        background-image: url("../img/gutter_clean.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0px -3px;
-        color: aliceblue;
-    }
-
-    .par_content5{
-        background-image: url("../img/before_after_roof_clean.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0px -3px;
-        color: aliceblue;
+    .sec_5 .services_detail{
+        padding-bottom: 50px;
     }
 
 
+    @media only screen and (max-width: 992px) {
+        .sec_4 .par_wrapper .par_content1 .container,
+        .sec_4 .par_wrapper .par_content2 .container,
+        .sec_4 .par_wrapper .par_content3 .container,
+        .sec_4 .par_wrapper .par_content4 .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+        }
 
+        .sec_4 .par_wrapper .par_content1 .container .text_wrap,
+        .sec_4 .par_wrapper .par_content2 .container .text_wrap,
+        .sec_4 .par_wrapper .par_content3 .container .text_wrap,
+        .sec_4 .par_wrapper .par_content4 .container .text_wrap{
+            width: 100%;
+        }
+
+        .sec_4 .par_wrapper .par_content1 .container .img_wrap,
+        .sec_4 .par_wrapper .par_content2 .container .img_wrap,
+        .sec_4 .par_wrapper .par_content3 .container .img_wrap,
+        .sec_4 .par_wrapper .par_content4 .container .img_wrap{
+            width: 100%;
+        }
+
+        .sec_4 .par_wrapper .par_content1 .container .img_wrap figure img,
+        .sec_4 .par_wrapper .par_content2 .container .img_wrap figure img,
+        .sec_4 .par_wrapper .par_content3 .container .img_wrap figure img,
+        .sec_4 .par_wrapper .par_content4 .container .img_wrap figure img{
+            width: 100%;
+            padding: unset;
+        }
+    }
 
 @media only screen and (max-width: 700px) {
     .sec_1 figure img {
