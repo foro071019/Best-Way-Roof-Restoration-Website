@@ -1,9 +1,5 @@
-.sec_1{
-margin: 0 0 100px 0;
-}
-
 .sec_2{
-    margin: 100px 0 100px 0;
+    padding: 100px 0 100px 0;
     }
 
 .sec_1{
@@ -47,7 +43,11 @@ margin: 0 0 100px 0;
 
 
 
-
+div#nf-form-2-cont {
+    background-color: #ffffff;
+    width: 60%;
+    padding: 50px 50px;
+}
 
 
 form {
@@ -60,6 +60,10 @@ form {
 
 input#nf-field-11 {
     width: 100%;
+}
+
+.sec_2{
+    background-color: #141414;
 }
 
 .sec_2 .form_wrapper{
