@@ -9,7 +9,7 @@
         wp_head();
     ?>
 </head>
-<body <?php body_class(); ?>>
+<body id="homepage" <?php body_class(); ?>>
     <header>
         <section class="container">
             <div class="header_menu_container">
